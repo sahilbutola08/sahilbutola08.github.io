@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Commissioner', sans-serif;
+    scroll-behavior: smooth;
+    transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+body{
+    overflow: hidden;
+    background-color: black;
+}
+
+.page {
+    overflow-y: scroll;
+    position: relative;
+    width: 100%;    
+    height: 100%;
+    padding: 10px;
+    padding-top: 50px;
+}
+
+#home {
+    background-color: black;
+    color: white;
+}
+
+.home-heading h1 {
+    font-family: 'Chilanka', cursive;
+}
+
+#s1 .heading {
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#s1 h1 {
+    font-size: 25px;
+    text-align: center;
+}
+
+.skill-set-left {
+    flex: 40%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.level {
+    border: 16px solid #f1f1f1;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transform: rotateZ(-45deg);
+}
+
+#html .level {
+    border:16px solid #3498db;
+}
+
+#css .level, #js .level {
+    border:16px solid #3498db;
+    border-right: 16px solid white; 
+}
+
+#ps .level {
+    border-top:16px solid #3498db;
+    border-left:16px solid #3498db;
+}
+
+.percentage .value{
+    font-weight: 800;
+    font-size: 30px;
+}
+.empty {
+    padding: 20px;;
+}
+#s1:target .circle {
+    width: 2px;
+    border-radius: 50px;
+    background-color: red;
+    animation: fill 2.5s ease-in-out;
+}
+
+.skill {
+    text-align: center;
+    line-height: 30px;
+}
+
+.circle {
+    height: 100%;
+}
+
+.skill-set-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 40%;
+}
+
+.nav {
+    position: relative;
+    background-color: white;
+    top: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 10%;
+    align-items: center;
+    z-index: 1;
+}
+
+.nav a{
+    text-decoration: none;
+    color: black; 
+    font-weight: 700;
+    align-self: center;
+    padding: 10px;
+}
+
+.nav a:active {
+    background-color: grey;
+    font-size: 15px;
+}
+
+#s1 {
+    background-color: tomato;
+    color: white;
+    padding-bottom: 50px;
+}
+
+#home, #s1, #s2, #s3, #s4 {
+    background-color:black;
+    color: white;
+    position: absolute;
+}
+
+#s1, #s2, #s3, #s4 {
+    bottom: 200%;
+}
+
+#t1:target #s1,
+#t2:target #s2,
+#t3:target #s3,
+#t4:target #s4 {
+    transform: translateY(200%);
+    transition: transform 1s cubic-bezier(0.215, 0.610, 0.355, 1); 
+}
+
+#t1:target #home ,
+#t2:target #home ,
+#t3:target #home ,
+#t4:target #home { 
+    visibility: hidden;
+    filter: blur(5);
+}
+
+@media screen and (max-width: 360px) {
+    .nav a{
+        font-size: 12px;
+    }
+
+    #s2 {
+        font-size: 12px;
+    }
+}
+.work {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+.frame {
+    border: 5px solid white;
+}
+
+#s3 .heading{
+    font-size: 25px;
+    padding: 15px;
+}
+.certi-container {
+    text-align: center;
+    padding: 30px;
+}
+
+.certify {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 200px;
+    border: 5px solid white;
+    background: url(assets/certi.png);
+    background-size: cover  ;
+}
+
+.frame#v2 {
+    display: none;
+}
+
+.subscribe {
+    text-align: center;
+    width: 180px;
+    border-radius: 5px;
+    align-items: center;
+    margin: 30px auto;   
+    background-color: red;
+    height: 30px;
+    display: flex;
+}
+
+.subscribe a{
+    padding: 60px;
+    text-decoration: none;
+    color: white;
+    font-weight: 400    ;
+}
+
+.value {
+    font-weight: 800;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+
+form textarea {
+    height: 180px;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+form input::placeholder {
+    font-size: 20px;
+}
+
+form input{
+    font-size: 20px;
+}
+
+form input#send {
+    border-radius: 6px;
+    color:white;
+    background-color: red;
+}
+
+
+@media screen and (min-width:768px) {
+
+#s1 .heading h1{
+    padding-top: 40px;
+    font-size: 40px;
+}
+
+.skill {
+    padding-bottom: 20px;
+}
+    .skills {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+.skill-set-left {
+    display: flex;
+    flex-direction: row;  
+}
+
+.level {
+    border: 30px solid #f1f1f1;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    transform: rotateZ(-45deg);
+}
+
+#html .level {
+    border:30px solid #3498db;
+}
+
+#css .level, #js .level {
+    border:30px solid #3498db;
+    border-right: 30px solid white; 
+}
+
+#ps .level {
+    border-top:30px solid #3498db;
+    border-left:30px solid #3498db;
+}
+
+.percentage .value{
+    font-weight: 800;
+    font-size: 30px;
+}
+.empty {
+    padding: 60px;
+}
+
+.circle {
+    display: flex;
+    flex-direction: row;
+    width: 90px;
+}
+.skill-set-right {
+    display: flex;
+    flex-direction: row;
+}
+#s3 .heading{
+    font-size: 25px;
+    padding: 15px;
+}
+.certi-container {
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.certify {
+    margin: 10px auto;
+    height: 300px;
+    width: 500px;
+    border: 5px solid white;
+    background: url(assets/certi.png);
+    background-size: contain;
+}
+
+.work {
+    flex-direction: row;
+}
+
+.work .frame {
+    padding: 50px;
+    margin: 10px;
+}
+
+.frame-xl {
+    border: 5px solid white;
+}
+
+.frame#v2 {
+    display: inline-block;
+}
+
+.subscribe {
+    text-align: center;
+    align-items: center;
+    margin: 30px auto;   
+    background-color: red;
+    height: 30px;
+    display: flex;
+}
+
+.subscribe a{
+    padding: 60px;
+    text-decoration: none;
+    color: white;
+    font-weight: 400    ;
+}
+.contact {
+    display: flex;
+    width: 100%;
+}
+
+form input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+
+form textarea {
+    height: 180px;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+form input::placeholder {
+    font-size: 20px;
+}
+
+form input{
+    font-size: 20px;
+}
+
+form input#send {
+    border-radius: 6px;
+    color:white;
+    background-color: red;
+}
+}
